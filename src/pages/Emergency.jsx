@@ -95,7 +95,14 @@ const Emergency = () => {
       </Helmet>
 
       {/* Emergency Hero */}
-      <section className="bg-gradient-to-br from-red-600 to-red-700 text-white py-20">
+      <section 
+        className="text-white py-20 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(220, 38, 38, 0.9), rgba(185, 28, 28, 0.9)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
@@ -114,7 +121,6 @@ const Emergency = () => {
                 Don't wait! Electrical emergencies can be dangerous. Our licensed emergency electricians are available 24/7 to help you right now.
               </p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -129,7 +135,6 @@ const Emergency = () => {
                 CALL (555) ELECTRIC NOW
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -164,7 +169,6 @@ const Emergency = () => {
               Recognize the signs of electrical emergencies and know what to do before help arrives.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {emergencyTypes.map((emergency, index) => (
               <motion.div
@@ -173,18 +177,27 @@ const Emergency = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-white rounded-xl p-6 shadow-lg border-l-4 ${
-                  emergency.danger === 'critical' ? 'border-red-500' :
-                  emergency.danger === 'high' ? 'border-orange-500' : 'border-yellow-500'
+                  emergency.danger === 'critical' 
+                    ? 'border-red-500' 
+                    : emergency.danger === 'high' 
+                    ? 'border-orange-500' 
+                    : 'border-yellow-500'
                 }`}
               >
                 <div className="flex items-start mb-4">
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${
-                    emergency.danger === 'critical' ? 'bg-red-100' :
-                    emergency.danger === 'high' ? 'bg-orange-100' : 'bg-yellow-100'
+                    emergency.danger === 'critical' 
+                      ? 'bg-red-100' 
+                      : emergency.danger === 'high' 
+                      ? 'bg-orange-100' 
+                      : 'bg-yellow-100'
                   }`}>
                     <SafeIcon icon={emergency.icon} className={`w-6 h-6 ${
-                      emergency.danger === 'critical' ? 'text-red-600' :
-                      emergency.danger === 'high' ? 'text-orange-600' : 'text-yellow-600'
+                      emergency.danger === 'critical' 
+                        ? 'text-red-600' 
+                        : emergency.danger === 'high' 
+                        ? 'text-orange-600' 
+                        : 'text-yellow-600'
                     }`} />
                   </div>
                   <div>
@@ -192,7 +205,6 @@ const Emergency = () => {
                     <p className="text-gray-600 text-sm">{emergency.description}</p>
                   </div>
                 </div>
-
                 <div className="mb-4">
                   <h4 className="font-semibold text-gray-900 mb-2">What to do:</h4>
                   <ul className="space-y-1">
@@ -204,10 +216,12 @@ const Emergency = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className={`text-xs font-semibold uppercase tracking-wide ${
-                  emergency.danger === 'critical' ? 'text-red-600' :
-                  emergency.danger === 'high' ? 'text-orange-600' : 'text-yellow-600'
+                  emergency.danger === 'critical' 
+                    ? 'text-red-600' 
+                    : emergency.danger === 'high' 
+                    ? 'text-orange-600' 
+                    : 'text-yellow-600'
                 }`}>
                   {emergency.danger} Priority
                 </div>
@@ -228,7 +242,6 @@ const Emergency = () => {
               Fast, professional emergency electrical service when you need it most.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {responseProcess.map((step, index) => (
               <motion.div
@@ -273,7 +286,6 @@ const Emergency = () => {
                 ))}
               </ul>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -300,7 +312,14 @@ const Emergency = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section 
+        className="py-20 text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 64, 175, 0.9)), url('https://images.unsplash.com/photo-1621905252472-e52b5df73c80?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -316,13 +335,13 @@ const Emergency = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 Get Free Estimate
               </Link>
               <Link
                 to="/services"
-                className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition-all duration-300"
+                className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition-all duration-300 backdrop-blur-sm"
               >
                 View All Services
               </Link>

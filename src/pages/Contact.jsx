@@ -40,8 +40,14 @@ const Contact = () => {
   ];
 
   const serviceAreas = [
-    'Downtown', 'North Side', 'South Side', 'East End',
-    'West End', 'Suburbs', 'Industrial District', 'Commercial Zone'
+    'Downtown',
+    'North Side',
+    'South Side',
+    'East End',
+    'West End',
+    'Suburbs',
+    'Industrial District',
+    'Commercial Zone'
   ];
 
   return (
@@ -54,7 +60,14 @@ const Contact = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-800 text-white py-20">
+      <section 
+        className="text-white py-20 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 64, 175, 0.85)), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
@@ -147,7 +160,6 @@ const Contact = () => {
               We proudly serve residential and commercial customers throughout the metropolitan area.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {serviceAreas.map((area, index) => (
               <motion.div
@@ -165,7 +177,14 @@ const Contact = () => {
       </section>
 
       {/* Why Choose Us CTA */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section 
+        className="py-20 text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 64, 175, 0.9)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -181,13 +200,13 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+1-555-ELECTRIC"
-                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 Call (555) ELECTRIC
               </a>
               <a
                 href="mailto:info@electricpro.com"
-                className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition-all duration-300"
+                className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition-all duration-300 backdrop-blur-sm"
               >
                 Email Us
               </a>

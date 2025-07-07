@@ -73,7 +73,14 @@ const Services = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-800 text-white py-20">
+      <section 
+        className="text-white py-20 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 64, 175, 0.85)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
@@ -100,13 +107,13 @@ const Services = () => {
             >
               <a
                 href="tel:+1-555-ELECTRIC"
-                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 Call (555) ELECTRIC
               </a>
               <Link
                 to="/contact"
-                className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition-all duration-300"
+                className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition-all duration-300 backdrop-blur-sm"
               >
                 Get Free Estimate
               </Link>
@@ -126,7 +133,6 @@ const Services = () => {
               We offer a complete range of electrical services to meet all your residential and commercial needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -149,10 +155,7 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to={service.link}
-                  className="btn-primary w-full text-center block"
-                >
+                <Link to={service.link} className="btn-primary w-full text-center block">
                   Learn More
                 </Link>
               </motion.div>
@@ -197,10 +200,7 @@ const Services = () => {
                   <span>Smart home integration</span>
                 </li>
               </ul>
-              <Link
-                to="/services/residential"
-                className="btn-primary"
-              >
+              <Link to="/services/residential" className="btn-primary">
                 View Residential Services
               </Link>
             </motion.div>
@@ -237,10 +237,7 @@ const Services = () => {
                   <span>Preventive maintenance</span>
                 </li>
               </ul>
-              <Link
-                to="/services/commercial"
-                className="btn-primary"
-              >
+              <Link to="/services/commercial" className="btn-primary">
                 View Commercial Services
               </Link>
             </motion.div>
@@ -249,7 +246,14 @@ const Services = () => {
       </section>
 
       {/* Emergency Services */}
-      <section className="py-20 bg-red-600 text-white">
+      <section 
+        className="py-20 text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(220, 38, 38, 0.9), rgba(185, 28, 28, 0.9)), url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -271,19 +275,19 @@ const Services = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="tel:+1-555-ELECTRIC"
-                  className="bg-white text-red-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all duration-300 text-center"
+                  className="bg-white text-red-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all duration-300 text-center shadow-xl"
                 >
                   Call Emergency Line
                 </a>
                 <Link
                   to="/emergency"
-                  className="border-2 border-white hover:bg-white hover:text-red-600 font-bold py-3 px-8 rounded-lg transition-all duration-300 text-center"
+                  className="border-2 border-white hover:bg-white hover:text-red-600 font-bold py-3 px-8 rounded-lg transition-all duration-300 text-center backdrop-blur-sm"
                 >
                   Learn More
                 </Link>
               </div>
             </div>
-            <div className="bg-white rounded-2xl p-8 text-gray-900">
+            <div className="bg-white rounded-2xl p-8 text-gray-900 backdrop-blur-sm bg-opacity-95">
               <h3 className="text-2xl font-bold mb-6">Need Service Now?</h3>
               <LeadForm title="Emergency Service Request" />
             </div>

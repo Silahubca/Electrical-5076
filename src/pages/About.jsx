@@ -67,7 +67,14 @@ const About = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-800 text-white py-20">
+      <section 
+        className="text-white py-20 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 64, 175, 0.85)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
@@ -150,7 +157,6 @@ const About = () => {
                 </Link>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -182,7 +188,6 @@ const About = () => {
               These values guide everything we do and shape how we serve our customers and community.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -214,7 +219,6 @@ const About = () => {
               Our experienced team of licensed electricians is committed to providing exceptional service and expertise.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <motion.div
@@ -263,7 +267,6 @@ const About = () => {
               We maintain all required licenses, certifications, and insurance to provide professional electrical services.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -272,7 +275,6 @@ const About = () => {
               <h3 className="font-bold text-gray-900 mb-2">Master Electrician License</h3>
               <p className="text-gray-600 text-sm">License #EC12345</p>
             </div>
-
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <SafeIcon icon={FiAward} className="w-8 h-8 text-blue-600" />
@@ -280,7 +282,6 @@ const About = () => {
               <h3 className="font-bold text-gray-900 mb-2">Fully Insured</h3>
               <p className="text-gray-600 text-sm">$2M Liability Coverage</p>
             </div>
-
             <div className="text-center">
               <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <SafeIcon icon={FiCheck} className="w-8 h-8 text-yellow-600" />
@@ -288,7 +289,6 @@ const About = () => {
               <h3 className="font-bold text-gray-900 mb-2">Bonded Contractors</h3>
               <p className="text-gray-600 text-sm">Surety Bond Protected</p>
             </div>
-
             <div className="text-center">
               <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <SafeIcon icon={FiTool} className="w-8 h-8 text-red-600" />
@@ -301,7 +301,14 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section 
+        className="py-20 text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 64, 175, 0.9)), url('https://images.unsplash.com/photo-1621905251970-b1a2a3ab1e8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -317,13 +324,13 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+1-555-ELECTRIC"
-                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 Call (555) ELECTRIC
               </a>
               <Link
                 to="/contact"
-                className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition-all duration-300"
+                className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition-all duration-300 backdrop-blur-sm"
               >
                 Get Free Estimate
               </Link>

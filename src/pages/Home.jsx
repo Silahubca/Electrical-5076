@@ -33,7 +33,15 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
+      <section 
+        className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden min-h-screen flex items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 64, 175, 0.85)), url('https://images.unsplash.com/photo-1621905252472-e52b5df73c80?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -53,14 +61,14 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a
                   href="tel:+1-555-ELECTRIC"
-                  className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-xl"
                 >
                   <SafeIcon icon={FiPhone} className="w-5 h-5 mr-2" />
                   Call (555) ELECTRIC
                 </a>
                 <Link
                   to="/contact"
-                  className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 text-center"
+                  className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 text-center backdrop-blur-sm"
                 >
                   Get Free Estimate
                 </Link>
@@ -81,7 +89,7 @@ const Home = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-white rounded-2xl shadow-2xl p-8"
+              className="bg-white rounded-2xl shadow-2xl p-8 backdrop-blur-sm bg-opacity-95"
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Get Your Free Estimate</h2>
               <LeadForm />
@@ -120,7 +128,14 @@ const Home = () => {
       <WhyChooseUs />
 
       {/* Emergency CTA */}
-      <section className="bg-red-600 text-white py-16">
+      <section 
+        className="text-white py-16 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(220, 38, 38, 0.9), rgba(185, 28, 28, 0.9)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -136,14 +151,14 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+1-555-ELECTRIC"
-                className="bg-white text-red-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                className="bg-white text-red-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-xl"
               >
                 <SafeIcon icon={FiPhone} className="w-5 h-5 mr-2" />
                 Call Emergency Line
               </a>
               <Link
                 to="/emergency"
-                className="border-2 border-white hover:bg-white hover:text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 text-center"
+                className="border-2 border-white hover:bg-white hover:text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 text-center backdrop-blur-sm"
               >
                 Learn More
               </Link>

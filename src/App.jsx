@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
+import ScrollProgress from './components/common/ScrollProgress';
+import BackToTop from './components/common/BackToTop';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import ResidentialServices from './pages/ResidentialServices';
@@ -14,6 +16,7 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import ServiceAreas from './pages/ServiceAreas';
 import Emergency from './pages/Emergency';
+import Gallery from './pages/Gallery';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Sitemap from './pages/Sitemap';
@@ -28,6 +31,7 @@ function App() {
   return (
     <CMSProvider>
       <div className="App">
+        <ScrollProgress />
         <ScrollToTop />
         <Header />
         <AnimatePresence mode="wait">
@@ -42,6 +46,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/service-areas" element={<ServiceAreas />} />
             <Route path="/emergency" element={<Emergency />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/sitemap" element={<Sitemap />} />
@@ -58,6 +63,7 @@ function App() {
           </Routes>
         </AnimatePresence>
         <Footer />
+        <BackToTop />
       </div>
     </CMSProvider>
   );
